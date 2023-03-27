@@ -22,3 +22,13 @@ aplicaT :: Etiqueta -> Tema -> Bool
 aplicaT eti (Tem _ et _) = elem eti et
 
 
+t1 = Tem "nombre" ["etiquera1", "etiqueta2"] "datos"
+
+test = [
+    nuevoT "nombre" "datos" == Tem "nombre" [] "datos",
+    nombreT t1 == "nombre",
+    datosT t1 == "datos",
+    etiquetasT t1 == ["etiquera1", "etiqueta2"],
+    agregarT "etiqueta3" t1 == Tem "nombre" ["etiquera1", "etiqueta2", "etiqueta3"] "datos",
+    aplicaT "etiqueta2" t1 == True
+       ]
