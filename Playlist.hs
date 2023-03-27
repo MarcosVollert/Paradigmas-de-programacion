@@ -27,5 +27,5 @@ test = [
     skipP (Play 0 test1) == Play 1 [nuevoT "tema0" "a", nuevoT "tema1" "b"],
     backP (Play 1 test1) == Play 0 [nuevoT "tema0" "a", nuevoT "tema1" "b"],
     resetP (Play 5 test1) == Play 0 [nuevoT "tema0" "a", nuevoT "tema1" "b"]
-       ]
+    ]
 
