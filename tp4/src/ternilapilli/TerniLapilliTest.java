@@ -32,6 +32,18 @@ public class TerniLapilliTest {
 	   assertEquals(1, game.getOs().size());
 	   assertTrue(game.getOs().contains(new Position( 2, 2 )));
    }
+	
+	@Test public void testPruebaQueElTurnoSeCambia() {  
+       TerniLapilli game = new TerniLapilli();
+       game.putAt( new Position( 1, 1 ));  //X
+       game.putAt( new Position( 2, 1 ));  //O
+       game.putAt( new Position( 3, 1 ));  //X
+       
+	   assertTrue(game.getXs().contains(new Position( 1, 1 )));
+	   assertTrue(game.getOs().contains(new Position( 2, 1 )));
+	   assertTrue(game.getXs().contains(new Position( 3, 1 )));
+    }
+   
 
   
 
